@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PolishYourEnglish" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/PolishYourEnglish" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_lib/mswu" />
+					<Add directory="include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_lib/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+					<Add library="libwxmsw30u.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add directory="$(#wx)/lib/gcc_lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-Wall" />
+			<Add directory="$(#wx)/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+			<Add library="libkernel32.a" />
+			<Add library="libuser32.a" />
+			<Add library="libgdi32.a" />
+			<Add library="libwinspool.a" />
+			<Add library="libcomdlg32.a" />
+			<Add library="libadvapi32.a" />
+			<Add library="libshell32.a" />
+			<Add library="libole32.a" />
+			<Add library="liboleaut32.a" />
+			<Add library="libuuid.a" />
+			<Add library="libcomctl32.a" />
+			<Add library="libwsock32.a" />
+			<Add library="libodbc32.a" />
+		</Linker>
+		<Unit filename="Instrukcja.cpp" />
+		<Unit filename="Instrukcja.h" />
+		<Unit filename="PolishYourEnglishApp.cpp" />
+		<Unit filename="PolishYourEnglishApp.h" />
+		<Unit filename="PolishYourEnglishMain.cpp" />
+		<Unit filename="PolishYourEnglishMain.h" />
+		<Unit filename="Rezultat.cpp" />
+		<Unit filename="Rezultat.h" />
+		<Unit filename="Sprawdz.cpp" />
+		<Unit filename="Sprawdz.h" />
+		<Unit filename="Wybor.cpp" />
+		<Unit filename="Wybor.h" />
+		<Unit filename="include/Translate.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wxsmith/Instrukcja.wxs" />
+		<Unit filename="wxsmith/PolishYourEnglishdialog.wxs" />
+		<Unit filename="wxsmith/Rezultat.wxs" />
+		<Unit filename="wxsmith/Sprawdz.wxs" />
+		<Unit filename="wxsmith/Wybor1.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="PolishYourEnglishApp.cpp" main="PolishYourEnglishDialog" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxDialog wxs="wxsmith/PolishYourEnglishdialog.wxs" src="PolishYourEnglishMain.cpp" hdr="PolishYourEnglishMain.h" fwddecl="0" i18n="1" name="PolishYourEnglishDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/Wybor1.wxs" src="Wybor.cpp" hdr="Wybor.h" fwddecl="0" i18n="1" name="Wybor" language="CPP" />
+					<wxDialog wxs="wxsmith/Sprawdz.wxs" src="Sprawdz.cpp" hdr="Sprawdz.h" fwddecl="0" i18n="1" name="Sprawdz" language="CPP" />
+					<wxDialog wxs="wxsmith/Rezultat.wxs" src="Rezultat.cpp" hdr="Rezultat.h" fwddecl="0" i18n="1" name="Rezultat" language="CPP" />
+					<wxDialog wxs="wxsmith/Instrukcja.wxs" src="Instrukcja.cpp" hdr="Instrukcja.h" fwddecl="0" i18n="1" name="Instrukcja" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
